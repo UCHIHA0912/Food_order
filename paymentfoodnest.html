@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodNEST Payment</title>
-    <style>
+    <style> 
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -50,7 +50,7 @@
             background-color: #1e87c3;
         }
     </style>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script> /* follow https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/integration-steps/*/
 </head>
 <body>
     <header>
@@ -78,13 +78,13 @@
 
     <script>
         var options = {
-            "key": "rzp_test_dGdVctIfVmBsaa", // Enter the Key ID generated from the Dashboard
+            "key": "your API key", // Enter the Key ID generated from the Dashboard go to Razorpay to get your API key
             "amount": "150000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             "currency": "INR",
             "name": "FoodNEST", // Your business name
             "description": "Test Transaction",
             "image": "https://play.google.com/store/apps/details?id=com.foodnests.orderapp.com/your_logo", // URL to your logo image
-            "order_id": "order_NtEvY0wYaAbZBd", // This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "order_id": "your OrderID", // to understand how to take orderid follow this video https://www.youtube.com/watch?v=SFHbcs-lSio//
             "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
             "prefill": {
                 "name": "",
