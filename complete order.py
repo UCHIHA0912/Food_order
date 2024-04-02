@@ -2,11 +2,12 @@ import pymysql
 
 # Establishing connection to the database
 connection = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="#P9GLJR8UY",
-    database="foodnestDB"
+    host="localhost", #your local SQL server host
+    user="root",      #your local SQL server user  
+    password="#P9GLJR8UY",#your local SQL server pasword
+    database="foodnestDB" #your local SQL server the database name where all the data is being stored
 )
+#its a one time thing you just have to write it in the code that's it
 cursor = connection.cursor()
 
 def get_restaurants_by_cuisine(cuisine):
