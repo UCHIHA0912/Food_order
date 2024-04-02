@@ -3,10 +3,10 @@ import mysql.connector
 # Establish database connection
 try:
     connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="#P9GLJR8UY",
-        database="foodnestDB"
+        host="hostname",    #your local SQL hostname
+        user="username",    #your local userrname
+        password="password",    #your local SQL server password
+        database="foodnestDB"    # your database where the actions are being taken
     )
     connection.autocommit = True
 except mysql.connector.Error as e:
@@ -26,7 +26,7 @@ def create_customer_record(connection):
         health_conditions = input("Enter your health conditions: ")
         non_veg_days = input("Enter your non-vegetarian days: ")
         gender = input("Enter your gender: ")
-
+            #this will be the query for SQL
         cursor.execute("""
             INSERT INTO userdata 
             (customername, dob, email, address, delivery_location_tag, food_choices, 
